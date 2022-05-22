@@ -1,0 +1,187 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;900&display=swap');
+/* ============ only desktop view ============ */
+@media all and (min-width: 992px) {
+    .navbar .nav-item .dropdown-menu{  display:block; opacity: 0;  visibility: hidden; transition:.3s; margin-top:0;  }
+    .navbar .nav-item .nav-link{ font-family: "Montserrat" , sans-serif ;font-weight: 900;  }
+    .navbar .nav-item:hover .nav-link{ color: #fff;  }
+    .navbar .dropdown-menu.fade-down{ top:80%; transform: rotateX(-75deg); transform-origin: 0% 0%; }
+    .navbar .dropdown-menu.fade-up{ top:180%;  }
+    .navbar .nav-item:hover .dropdown-menu{ transition: .3s; opacity:1; visibility:visible; top:100%; transform: rotateX(0deg); }
+}
+:root{
+    --img_bg : 'img/pattern-30.svg';
+    /*--body-bg : #000000  ;*/
+    --body-bg: #000;
+
+}
+html > body {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+    /*background-color: var(--body-bg);*/
+
+/*    background-image: url(img/pattern-30.svg);
+    background-image: ;*/
+}
+
+.tgme_background_wrap {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: -1;
+  /*background: var(--body-bg);*/
+}
+
+.tgme_background {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.3;
+background-image: url('img/pattern-30.svg');
+filter: invert(100%);
+/*  -webkit-filter: blur(5px);
+  -moz-filter: blur(5px);
+  -o-filter: blur(5px);
+  -ms-filter: blur(5px);
+  /*filter: blur(5px);*/*/
+
+}
+
+.tgme_background_pattern.default {
+  background: var(--body-bg);
+  
+}
+/*
+li,a ,ul{
+    font-family: "Montserrat" , sans-serif !important;
+    font-weight: 900 !important;
+    color: #edf0f1 !important;
+    /*text-decoration: none !important;*/
+    /*font-size: 45 px !important;*/
+
+
+
+
+
+
+#my-address {
+    margin-top: 0.5rem;
+    margin-left: 1rem;
+    color: black;
+}
+.tgme_background_wrap {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: -1;
+  background: var(--body-bg);
+}
+.my-address-block {
+    background-color: #F8F9FA;
+    padding: 0.5rem;
+    white-space: nowrap;
+    padding-left: 0;
+    margin-left: 1rem;
+    text-align: center;
+    padding-right: 0;
+}
+
+.get-new-address-col {
+    text-align: center;
+    padding: 0.5rem;
+}
+
+.email-list-item {
+    padding-left: 0;
+    padding-bottom: 0;
+}
+
+.copy-button {
+    font-size: 75%;
+    color: #808080;
+    cursor: pointer;
+    background-color: transparent;
+    border: 0;
+    border-radius: 0.25rem;
+}
+
+.copy-button:hover {
+    color: #fff;
+    background-color: #007BFF;
+}
+
+header {
+    /*background-color: #f9f9f9;*/
+    padding-bottom: 1rem;
+    padding-top: 1rem;
+}
+
+main {
+    flex: 1; /* stick footer to the bottom */
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+}
+
+#language-selection {
+    width: 10rem;
+}
+
+footer {
+    padding-top: 1rem;
+    background-color: #eeeeee;
+}
+
+.open-collapse-button {
+    background-color: transparent;
+    width: 3rem;
+}
+
+.open-collapse-button > i {
+    font-size: 1.5em;
+}
+
+[aria-expanded="false"] .expand-button-closed {
+    display: block;
+}
+
+[aria-expanded="false"] .expand-button-opened {
+    display: none;
+}
+
+[aria-expanded="true"] .expand-button-closed {
+    display: none;
+}
+
+[aria-expanded="true"] .expand-button-opened {
+    display: block;
+}
+
+#new-content-avalable {
+    display: none;
+    text-align: center;
+}
+
+.email-body {
+    word-wrap: break-word;
+}
+
+.alert-fixed {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    z-index: 9999;
+    border-radius: 0px;
+    text-align: center;
+}
+#address-box-edit {
+    margin: 1rem;
+}
